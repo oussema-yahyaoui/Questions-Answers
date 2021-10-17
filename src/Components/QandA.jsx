@@ -1,6 +1,40 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class QandA extends Component {
+  constructor() {
+    super();
+    this.state = {
+      resulat: [],
+      product_id: 40339,
+    };
+    this.getresulat = this.getresulat.bind(this);
+  }
+
+  componentDidMount() {
+    this.getresulat();
+  }
+
+  getresulat() {
+    var config = {
+      method: "get",
+      url: "https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions?product_id=40339",
+      headers: {
+        Authorization: "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",
+      },
+    };
+
+    axios(config)
+      .then((response) => {
+        // console.log(response);
+        this.setState({ resulat: response.data.results });
+        console.log(this.state.resulat);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   render() {
     return (
       <div className="min-h-screen   grid grid-cols-7  justify-center  ">
@@ -126,6 +160,7 @@ class QandA extends Component {
     );
   }
 }
+
 export default QandA;
 // return (
 //   <div>
