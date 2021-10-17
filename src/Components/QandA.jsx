@@ -35,8 +35,16 @@ class QandA extends Component {
       });
   }
 
+
   render() {
+    
+    
+    
+    
     return (
+      this.state.resulat.map((question,i)=> 
+      <div>
+       
       <div className=" min-h-screen   grid grid-cols-7  justify-center  ">
         <div className="col-span-1 "></div>
         <div className=" col-span-5  grid grid-rows-6">
@@ -67,26 +75,43 @@ class QandA extends Component {
             <div className=" grid grid-cols-4 ">
               <div className="col-span-2 flex flex-row space-x-1">
                 <p className="text-1xl text-black font-bold">Q:</p>
-                <p>Who what which when where why where how?</p>
+                <p>{question.question_body}</p>
               </div>
               <div className="col-span-2 ">
-               <span className="text-xs font-thin space-x-1.5"> Helpful? Yes(25) | </span>
-                <span className="underline text-xs font-thin space-x-1.5">Add Answer</span>
+                <span className="text-xs font-thin space-x-1.5">
+                  {" "}
+                  Helpful? Yes(25) |{" "}
+                </span>
+                <span className="underline text-xs font-thin space-x-1.5">
+                  Add Answer
+                </span>
               </div>
             </div>
             <div className=" grid grid-rows-2 space-x-1.5">
               <div className="row-span-1 flex flex-row space-x-1.5">
                 <p className=" text-1xl text-black font-bold ">A:</p>
-                <span/>
+                <span />
                 Icing macaroon bear claw jelly beans chocolate cake.Cookie oat
                 cake chocolate halvah jelly cake cotton candy soufflé
                 topping.Jujubes topping cake gummies lemon drops.
               </div>
               <div className="row-span-1">
-               <span className="text-xs font-thin space-x-1.5">by User1337,May 1,2019</span>  
-               <span className="text-xs font-thin space-x-1.5">| Helpful?</span> 
-               <span className="underline text-xs font-thin space-x-1.5"> Yes </span>
-               <span className="no-underline text-xs font-thin space-x-1.5">(0)</span> <span className="underline text-xs font-thin space-x-1.5">| Report</span> 
+                <span className="text-xs font-thin space-x-1.5">
+                  by User1337,May 1,2019
+                </span>
+                <span className="text-xs font-thin space-x-1.5">
+                  | Helpful?
+                </span>
+                <span className="underline text-xs font-thin space-x-1.5">
+                  {" "}
+                  Yes{" "}
+                </span>
+                <span className="no-underline text-xs font-thin space-x-1.5">
+                  (0)
+                </span>{" "}
+                <span className="underline text-xs font-thin space-x-1.5">
+                  | Report
+                </span>
               </div>
             </div>
           </div>
@@ -97,21 +122,39 @@ class QandA extends Component {
                 <p>whomst whatever whence wherefore?</p>
               </div>
               <div className="col-span-2">
-              <span className="text-xs font-thin space-x-1.5"> Helpful? Yes(25) | </span>
-                <span className="underline text-xs font-thin space-x-1.5">Add Answer</span>
+                <span className="text-xs font-thin space-x-1.5">
+                  {" "}
+                  Helpful? Yes(25) |{" "}
+                </span>
+                <span className="underline text-xs font-thin space-x-1.5">
+                  Add Answer
+                </span>
               </div>
             </div>
             <div className=" grid grid-rows-2 space-x-1">
               <div className="row-span-1 flex flex-row space-x-1">
-                <p className="text-1xl font-bold ">A:</p><span/>
+                <p className="text-1xl font-bold ">A:</p>
+                <span />
                 Tootsie rool pudding jelly-o jujubes jelly-o wafer biscuit
                 danish ice cream.Cootton candy sweet roll candy.
               </div>
               <div className="row-span-1">
-              <span className="text-xs font-thin space-x-1.5">by User1337,May 1,2019</span>  
-               <span className="text-xs font-thin space-x-1.5">| Helpful?</span> 
-               <span className="underline text-xs font-thin space-x-1.5"> Yes </span>
-               <span className="no-underline text-xs font-thin space-x-1.5">(0)</span> <span className="underline text-xs font-thin space-x-1.5">| Report</span>
+                <span className="text-xs font-thin space-x-1.5">
+                  by User1337,May 1,2019
+                </span>
+                <span className="text-xs font-thin space-x-1.5">
+                  | Helpful?
+                </span>
+                <span className="underline text-xs font-thin space-x-1.5">
+                  {" "}
+                  Yes{" "}
+                </span>
+                <span className="no-underline text-xs font-thin space-x-1.5">
+                  (0)
+                </span>{" "}
+                <span className="underline text-xs font-thin space-x-1.5">
+                  | Report
+                </span>
               </div>
             </div>
           </div>
@@ -122,22 +165,39 @@ class QandA extends Component {
                 <p>whomst whatever whence wherefore?</p>
               </div>
               <div className="col-span-2">
-              <span className="text-xs font-thin space-x-1.5"> Helpful? Yes(25) | </span>
-                <span className="underline text-xs font-thin space-x-1.5">Add Answer</span>
+                <span className="text-xs font-thin space-x-1.5">
+                  {" "}
+                  Helpful? Yes(25) |{" "}
+                </span>
+                <span className="underline text-xs font-thin space-x-1.5">
+                  Add Answer
+                </span>
               </div>
             </div>
             <div className=" grid grid-rows-2 space-x-1 ">
               <div className="row-span-1 flex flex-row space-x-1">
                 <p className="text-1xl font-bold space-x-1">A:</p>
-                <span/>
+                <span />
                 Tootsie rool pudding jelly-o jujubes jelly-o wafer biscuit
                 danish ice cream.Cootton candy sweet roll candy.
               </div>
               <div className="row-span-1">
-              <span className="text-xs font-thin space-x-1.5">by User1337,May 1,2019</span>  
-               <span className="text-xs font-thin space-x-1.5">| Helpful?</span> 
-               <span className="underline text-xs font-thin space-x-1.5"> Yes </span>
-               <span className="no-underline text-xs font-thin space-x-1.5">(0)</span> <span className="underline text-xs font-thin space-x-1.5">| Report</span>
+                <span className="text-xs font-thin space-x-1.5">
+                  by User1337,May 1,2019
+                </span>
+                <span className="text-xs font-thin space-x-1.5">
+                  | Helpful?
+                </span>
+                <span className="underline text-xs font-thin space-x-1.5">
+                  {" "}
+                  Yes{" "}
+                </span>
+                <span className="no-underline text-xs font-thin space-x-1.5">
+                  (0)
+                </span>{" "}
+                <span className="underline text-xs font-thin space-x-1.5">
+                  | Report
+                </span>
               </div>
             </div>
           </div>
@@ -151,17 +211,28 @@ class QandA extends Component {
                   <img className="w-14 h-12 " />
                 </div>
                 <div className=" col-span-2">
-                <span className="text-xs font-thin space-x-1.5">by User1337-<span className="text-xs font-bold space-x-1">Seller</span>,May 1,2019</span>  
-               <span className="text-xs font-thin space-x-1.5">| Helpful?</span> 
-               <span className="underline text-xs font-thin space-x-1.5"> Yes </span>
-               <span className="no-underline text-xs font-thin space-x-1.5">(0)</span> <span className="underline text-xs font-thin space-x-1.5">| Report</span>
-                  
+                  <span className="text-xs font-thin space-x-1.5">
+                    by User1337-
+                    <span className="text-xs font-bold space-x-1">Seller</span>
+                    ,May 1,2019
+                  </span>
+                  <span className="text-xs font-thin space-x-1.5">
+                    | Helpful?
+                  </span>
+                  <span className="underline text-xs font-thin space-x-1.5">
+                    {" "}
+                    Yes{" "}
+                  </span>
+                  <span className="no-underline text-xs font-thin space-x-1.5">
+                    (0)
+                  </span>{" "}
+                  <span className="underline text-xs font-thin space-x-1.5">
+                    | Report
+                  </span>
                 </div>
               </div>
-
-              
             </div>
-            <br/>
+            <br />
             <div className="text-xs font-bold">LOAD MORE ANSWERS</div>
           </div>
           <div className="row-span-1 ">
@@ -181,10 +252,16 @@ class QandA extends Component {
             </div>
           </div>
         </div>
+
         <div className="col-span-1 "></div>
       </div>
-    );
+      </div>
+      )
+    )
+    
+    
   }
+  
 }
 
 export default QandA;
