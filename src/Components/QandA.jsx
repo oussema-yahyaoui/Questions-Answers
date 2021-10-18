@@ -7,9 +7,15 @@ class QandA extends Component {
     this.state = {
       resulat: [],
       product_id: 40339,
+
+      // view:false
     };
     this.getresulat = this.getresulat.bind(this);
   }
+
+  // changerview(){
+  //   this.setState({view:true})
+  // }
 
   componentDidMount() {
     this.getresulat();
@@ -20,7 +26,7 @@ class QandA extends Component {
       method: "get",
       url: "https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions?product_id=40339",
       headers: {
-        Authorization: "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",
+        Authorization: "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",
       },
     };
 
@@ -36,14 +42,10 @@ class QandA extends Component {
   }
 
 
-  render() {
-    
-    
-    
-    
+  render() {    
     return (
       this.state.resulat.map((question,i)=> 
-      <div>
+      <div key={i}>
        
       <div className=" min-h-screen   grid grid-cols-7  justify-center  ">
         <div className="col-span-1 "></div>
@@ -75,12 +77,12 @@ class QandA extends Component {
             <div className=" grid grid-cols-4 ">
               <div className="col-span-2 flex flex-row space-x-1">
                 <p className="text-1xl text-black font-bold">Q:</p>
-                <p>{question.question_body}</p>
+                <p>Who what which when where why where how?</p>
               </div>
               <div className="col-span-2 ">
                 <span className="text-xs font-thin space-x-1.5">
                   {" "}
-                  Helpful? Yes(25) |{" "}
+                  Helpful? Yes(24) |{" "}
                 </span>
                 <span className="underline text-xs font-thin space-x-1.5">
                   Add Answer
@@ -119,12 +121,12 @@ class QandA extends Component {
             <div className=" grid grid-cols-4 space-x-1">
               <div className="col-span-2 flex flex-row space-x-1">
                 <p className="text-1xl font-bold ">Q:</p>
-                <p>whomst whatever whence wherefore?</p>
+                <p>Who what which when where why where how?</p>
               </div>
               <div className="col-span-2">
                 <span className="text-xs font-thin space-x-1.5">
                   {" "}
-                  Helpful? Yes(25) |{" "}
+                  Helpful? Yes(24) |{" "}
                 </span>
                 <span className="underline text-xs font-thin space-x-1.5">
                   Add Answer
